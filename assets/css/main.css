@@ -114,6 +114,60 @@ h6 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add subtle shadow for extra clarity */
 }
 
+
+.blinking-button {
+  display: inline-flex;
+  align-items: center; /* Vertically center the text */
+  justify-content: center; /* Horizontally center the text */
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff0000;
+  padding: 12px 40px; /* Adjust padding */
+  border-radius: 25px; /* Rounded corners */
+  text-align: center;
+  text-decoration: none;
+  animation: blink 1.5s infinite;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.blinking-button:hover {
+  background-color: #cc0000; /* Slightly darker on hover */
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (min-width: 992px) {
+  .blinking-button {
+    font-size: 18px; /* Larger text for larger screens */
+    padding: 14px 60px; /* More padding for larger screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .blinking-button {
+    font-size: 14px; /* Adjust font size for medium screens */
+    padding: 10px 30px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 576px) {
+  .blinking-button {
+    font-size: 12px; /* Smallest font size for small screens */
+    padding: 8px 20px; /* Adjust padding */
+  }
+}
+
+
 .overlay-text h4 {
   font-size: 28px;
   font-weight: bold;
