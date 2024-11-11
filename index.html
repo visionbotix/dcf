@@ -466,6 +466,43 @@
 
   </footer>
 
+<!-- Registration Popup Modal -->
+<div class="modal fade" id="registrationPopup" tabindex="-1" aria-labelledby="registrationPopupLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title blinking-text" id="registrationPopupLabel">Register Now!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Welcome to the Digital Community Foundation! Are you a company, freelancer, or student seeking opportunities?</p>
+        <p>Register now and be part of our growing network:</p>
+        <ul>
+          <li><strong>Companies:</strong> Post jobs, internships, and projects.</li>
+          <li><strong>Freelancers:</strong> Explore work opportunities.</li>
+          <li><strong>Internship Seekers/Students:</strong> Find internships and showcase your skills.</li>
+        </ul>
+        <p><strong>Don't miss out—register today!</strong></p>
+      </div>
+      <div class="modal-footer">
+        <a href="registration.html" class="btn btn-primary">Register Now</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  // Show the modal when the page loads
+  document.addEventListener("DOMContentLoaded", function () {
+    const registrationPopup = new bootstrap.Modal(document.getElementById("registrationPopup"));
+    registrationPopup.show();
+  });
+</script>
+
+
+  
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
