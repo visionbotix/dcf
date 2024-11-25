@@ -80,6 +80,10 @@
           <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#company">Company</button>
         </li>
         <li class="nav-item">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#professor">Professors</button>
+        </li>
+
+        <li class="nav-item">
           <button class="nav-link" data-bs-toggle="tab" data-bs-target="#freelancer">Freelancer</button>
         </li>
         <li class="nav-item">
@@ -265,93 +269,242 @@
           </div>
           
 
-        <!-- Student Form -->
+          <div class="tab-pane fade" id="professor" role="tabpanel" aria-labelledby="professor-tab">
+            <form id="professorForm" class="php-email-form bg-light p-4">
+              <div class="row gy-4">
+                <!-- Personal Information -->
+                <div class="col-md-6">
+                  <label for="professorName" class="form-label">Full Name</label>
+                  <input type="text" name="professorName" id="professorName" class="form-control" placeholder="Enter your full name" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="professorEmail" class="form-label">Email</label>
+                  <input type="email" name="professorEmail" id="professorEmail" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="professorPhone" class="form-label">Phone Number</label>
+                  <input type="tel" name="professorPhone" id="professorPhone" class="form-control" placeholder="Enter your phone number">
+                </div>
+                <div class="col-md-6">
+                  <label for="professorCNIC" class="form-label">CNIC</label>
+                  <input type="number" name="professorCNIC" id="professorCNIC" class="form-control" placeholder="Enter your CNIC">
+                </div>
+                <div class="col-md-6">
+                  <label for="professorDOB" class="form-label">Date of Birth</label>
+                  <input type="date" name="professorDOB" id="professorDOB" class="form-control" required>
+                </div>
+          
+                <!-- Professional Information -->
+                <div class="col-md-6">
+                  <label for="professorDesignation" class="form-label">Current Designation</label>
+                  <input type="text" name="professorDesignation" id="professorDesignation" class="form-control" placeholder="E.g., Assistant Professor, Lecturer" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="universityAffiliation" class="form-label">Affiliated University/Institution</label>
+                  <input type="text" name="universityAffiliation" id="universityAffiliation" class="form-control" placeholder="Enter your university or institution name" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="researchField" class="form-label">Primary Field of Research</label>
+                  <input type="text" name="researchField" id="researchField" class="form-control" placeholder="E.g., Artificial Intelligence, Physics" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="yearsExperience" class="form-label">Years of Experience</label>
+                  <input type="number" name="yearsExperience" id="yearsExperience" class="form-control" placeholder="Enter total years of experience" required>
+                </div>
+          
+                <!-- Academic Background -->
+                <div class="col-md-6">
+                  <label for="highestDegree" class="form-label">Highest Degree Attained</label>
+                  <input type="text" name="highestDegree" id="highestDegree" class="form-control" placeholder="E.g., Ph.D., M.Phil." required>
+                </div>
+                <div class="col-md-6">
+                  <label for="degreeName" class="form-label">Degree Name</label>
+                  <input type="text" name="degreeName" id="degreeName" class="form-control" placeholder="E.g., Computer Science, Electrical Engineering" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="degreeInstitution" class="form-label">Degree Institution</label>
+                  <input type="text" name="degreeInstitution" id="degreeInstitution" class="form-control" placeholder="Enter institution name for highest degree" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="researchPapers" class="form-label">Research Papers Published</label>
+                  <textarea name="researchPapers" id="researchPapers" rows="3" class="form-control" placeholder="Provide details or links to your published papers"></textarea>
+                </div>
+                <div class="col-md-6">
+                  <label for="journalsReviewed" class="form-label">Journals Reviewed/Edited</label>
+                  <textarea name="journalsReviewed" id="journalsReviewed" rows="3" class="form-control" placeholder="Provide details of journals you've reviewed or edited"></textarea>
+                </div>
+          
+                <!-- Mentorship & Editing Preferences -->
+                <div class="col-md-6">
+                  <label for="mentorshipInterest" class="form-label">Areas of Mentorship Interest</label>
+                  <textarea name="mentorshipInterest" id="mentorshipInterest" rows="3" class="form-control" placeholder="E.g., Student mentorship, Research guidance"></textarea>
+                </div>
+                <div class="col-md-6">
+                  <label for="editingInterest" class="form-label">Preferred Journal Editing Fields</label>
+                  <textarea name="editingInterest" id="editingInterest" rows="3" class="form-control" placeholder="E.g., Computer Science, Social Sciences"></textarea>
+                </div>
+          
+                <!-- Contact Information -->
+                <div class="col-md-6">
+                  <label for="district" class="form-label">District</label>
+                  <input type="text" name="district" id="district" class="form-control" placeholder="Enter your district">
+                </div>
+                <div class="col-md-6">
+                  <label for="tehsil" class="form-label">Tehsil</label>
+                  <input type="text" name="tehsil" id="tehsil" class="form-control" placeholder="Enter your tehsil">
+                </div>
+                <div class="col-md-12">
+                  <label for="residentialAddress" class="form-label">Residential Address</label>
+                  <textarea name="residentialAddress" id="residentialAddress" rows="3" class="form-control" placeholder="Enter your residential address"></textarea>
+                </div>
+                <div class="col-md-12">
+                  <label for="permanentAddress" class="form-label">Permanent Address</label>
+                  <textarea name="permanentAddress" id="permanentAddress" rows="3" class="form-control" placeholder="Enter your permanent address"></textarea>
+                </div>
+          
+                <!-- Submit Button -->
+                <div class="col-md-12 text-center">
+                  <button type="submit" class="btn btn-primary px-4">Register</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          
+
+
 <!-- Internship Seeker/Student Registration Form -->
 <div class="tab-pane fade" id="student" role="tabpanel" aria-labelledby="student-tab">
-    <form id="studentForm" class="php-email-form bg-light p-4">
-        <div class="row gy-4">
-            <!-- Personal Information -->
-            <div class="col-md-6">
-                <label for="studentName" class="form-label">Full Name</label>
-                <input type="text" name="studentName" id="studentName" class="form-control" placeholder="Enter your full name" required>
-            </div>
-            <div class="col-md-6">
-                <label for="studentEmail" class="form-label">Email</label>
-                <input type="email" name="studentEmail" id="studentEmail" class="form-control" placeholder="Enter your email" required>
-            </div>
-            <div class="col-md-6">
-                <label for="studentPhone" class="form-label">Phone Number</label>
-                <input type="tel" name="studentPhone" id="studentPhone" class="form-control" placeholder="Enter your phone number (optional)">
-            </div>
-            <div class="col-md-6">
-                <label for="studentDOB" class="form-label">Date of Birth</label>
-                <input type="date" name="studentDOB" id="studentDOB" class="form-control" required>
-            </div>
-            <div class="col-md-6">
-                <label for="studentCity" class="form-label">City</label>
-                <input type="text" name="studentCity" id="studentCity" class="form-control" placeholder="Enter your city" required>
-            </div>
+  <form id="studentForm" class="php-email-form bg-light p-4">
+      <div class="row gy-4">
+          <!-- Personal Information -->
+          <div class="col-md-6">
+              <label for="studentName" class="form-label">Full Name</label>
+              <input type="text" name="studentName" id="studentName" class="form-control" placeholder="Enter your full name" required>
+          </div>
+          <div class="col-md-6">
+              <label for="studentEmail" class="form-label">Email</label>
+              <input type="email" name="studentEmail" id="studentEmail" class="form-control" placeholder="Enter your email" required>
+          </div>
+          <div class="col-md-6">
+              <label for="studentPhone" class="form-label">Phone Number</label>
+              <input type="tel" name="studentPhone" id="studentPhone" class="form-control" placeholder="Enter your phone number">
+          </div>
+          <div class="col-md-6">
+              <label for="studentDOB" class="form-label">Date of Birth</label>
+              <input type="date" name="studentDOB" id="studentDOB" class="form-control" required>
+          </div>
+          <div class="col-md-6">
+              <label for="studentCity" class="form-label">City</label>
+              <input type="text" name="studentCity" id="studentCity" class="form-control" placeholder="Enter your residential city" required>
+          </div>
+          <div class="col-md-6">
+              <label for="studentCNIC" class="form-label">CNIC</label>
+              <input type="number" name="studentCNIC" id="studentCNIC" class="form-control" placeholder="Enter your CNIC number" required>
+          </div>
+          <div class="col-md-6">
+              <label for="studentDistrict" class="form-label">District</label>
+              <input type="text" name="studentDistrict" id="studentDistrict" class="form-control" placeholder="Enter your district" required>
+          </div>
+          <div class="col-md-6">
+              <label for="studentTehsil" class="form-label">Tehsil</label>
+              <input type="text" name="studentTehsil" id="studentTehsil" class="form-control" placeholder="Enter your tehsil" required>
+          </div>
+          <div class="col-md-12">
+              <label for="residentialAddress" class="form-label">Complete Residential Address</label>
+              <textarea name="residentialAddress" id="residentialAddress" rows="3" class="form-control" placeholder="Enter your residential address"></textarea>
+          </div>
+          <div class="col-md-12">
+              <label for="permanentAddress" class="form-label">Complete Permanent Address</label>
+              <textarea name="permanentAddress" id="permanentAddress" rows="3" class="form-control" placeholder="Enter your permanent address"></textarea>
+          </div>
 
-            <!-- Educational Background -->
-            <div class="col-md-6">
-                <label for="educationLevel" class="form-label">Current Education Level</label>
-                <select name="educationLevel" id="educationLevel" class="form-select" required>
-                    <option value="Undergraduate">Undergraduate</option>
-                    <option value="Graduate">Graduate</option>
-                    <option value="Postgraduate">Postgraduate</option>
-                </select>
-            </div>
-            <div class="col-md-6">
-                <label for="fieldOfStudy" class="form-label">Major/Field of Study</label>
-                <input type="text" name="fieldOfStudy" id="fieldOfStudy" class="form-control" placeholder="Enter your field of study" required>
-            </div>
-            <div class="col-md-6">
-                <label for="universityName" class="form-label">Name of University/Institution</label>
-                <input type="text" name="universityName" id="universityName" class="form-control" placeholder="Enter your university name" required>
-            </div>
-            <div class="col-md-6">
-                <label for="graduationYear" class="form-label">Graduation Year</label>
-                <input type="number" name="graduationYear" id="graduationYear" class="form-control" placeholder="Enter your graduation year (optional)">
-            </div>
+          <!-- Educational Background -->
+          <div class="col-md-6">
+              <label for="educationLevel" class="form-label">Current Education Level</label>
+              <select name="educationLevel" id="educationLevel" class="form-select" required>
+                  <option value="Undergraduate">Undergraduate</option>
+                  <option value="Graduate">Graduate</option>
+                  <option value="Postgraduate">Postgraduate</option>
+              </select>
+          </div>
+          <div class="col-md-6">
+              <label for="fieldOfStudy" class="form-label">Major/Field of Study</label>
+              <input type="text" name="fieldOfStudy" id="fieldOfStudy" class="form-control" placeholder="Enter your degree program name" required>
+          </div>
+          <div class="col-md-6">
+              <label for="universityName" class="form-label">Name of University/Institution</label>
+              <input type="text" name="universityName" id="universityName" class="form-control" placeholder="Enter your university name" required>
+          </div>
+          <div class="col-md-6">
+              <label for="graduationYear" class="form-label">Graduation Year</label>
+              <input type="number" name="graduationYear" id="graduationYear" class="form-control" placeholder="Enter your graduation year" required>
+          </div>
+          <div class="col-md-6">
+              <label for="studentCGPA" class="form-label">Bachelors CGPA (or Current CGPA if ongoing)</label>
+              <input type="text" name="studentCGPA" id="studentCGPA" class="form-control" placeholder="Enter your CGPA" required>
+          </div>
+          <div class="col-md-6">
+              <label for="semesterLevel" class="form-label">Semester Level (or Completed)</label>
+              <input type="text" name="semesterLevel" id="semesterLevel" class="form-control" placeholder="Enter your current semester or completed level">
+          </div>
+          <div class="col-md-6">
+              <label for="degreeCompletionDate" class="form-label">Degree Completion Date (Expected if ongoing)</label>
+              <input type="date" name="degreeCompletionDate" id="degreeCompletionDate" class="form-control">
+          </div>
 
-            <!-- Skills -->
-            <div class="col-md-12">
-                <label for="keySkills" class="form-label">Key Skills</label>
-                <textarea name="keySkills" id="keySkills" rows="3" class="form-control" placeholder="E.g., Python, Graphic Design, Data Analysis, etc."></textarea>
-            </div>
-            <div class="col-md-12">
-                <label for="projectsCompleted" class="form-label">Projects Completed</label>
-                <textarea name="projectsCompleted" id="projectsCompleted" rows="3" class="form-control" placeholder="Add any project details or links"></textarea>
-            </div>
+          <!-- Final Year Project -->
+          <div class="col-md-12">
+              <label for="fypName" class="form-label">Final Year Project Name</label>
+              <input type="text" name="fypName" id="fypName" class="form-control" placeholder="Enter your FYP name">
+          </div>
+          <div class="col-md-12">
+              <label for="fypObjectives" class="form-label">Final Year Project Objectives</label>
+              <textarea name="fypObjectives" id="fypObjectives" rows="3" class="form-control" placeholder="Describe the objectives of your FYP"></textarea>
+          </div>
+          <div class="col-md-12">
+              <label for="fypDescription" class="form-label">Final Year Project Description</label>
+              <textarea name="fypDescription" id="fypDescription" rows="5" class="form-control" placeholder="Provide a brief description of your FYP"></textarea>
+          </div>
 
-            <!-- Internship Preferences -->
-            <div class="col-md-6">
-                <label for="preferredIndustry" class="form-label">Preferred Industry/Field</label>
-                <select name="preferredIndustry" id="preferredIndustry" class="form-select">
-                    <option value="IT">IT</option>
-                    <option value="Marketing">Marketing</option>
-                    <option value="Finance">Finance</option>
-                    <option value="Education">Education</option>
-                    <option value="Healthcare">Healthcare</option>
-                </select>
-            </div>
-            <div class="col-md-6">
-                <label for="preferredLocation" class="form-label">Preferred Location</label>
-                <select name="preferredLocation" id="preferredLocation" class="form-select">
-                    <option value="Remote">Remote</option>
-                    <option value="On-Site">On-Site</option>
-                    <option value="Hybrid">Hybrid</option>
-                </select>
-            </div>
+          <!-- Skills -->
+          <div class="col-md-12">
+              <label for="keySkills" class="form-label">Key Skills</label>
+              <textarea name="keySkills" id="keySkills" rows="3" class="form-control" placeholder="E.g., Python, Graphic Design, Data Analysis, etc."></textarea>
+          </div>
+          <div class="col-md-12">
+              <label for="projectsCompleted" class="form-label">Projects Completed</label>
+              <textarea name="projectsCompleted" id="projectsCompleted" rows="3" class="form-control" placeholder="Add any project details or links"></textarea>
+          </div>
 
-            <!-- Submit Button -->
-            <div class="col-md-12 text-center">
-                <button type="submit" class="btn btn-primary px-4">Register</button>
-            </div>
-        </div>
-    </form>
+          <!-- Internship Preferences -->
+          <div class="col-md-6">
+              <label for="preferredIndustry" class="form-label">Preferred Industry/Field</label>
+              <select name="preferredIndustry" id="preferredIndustry" class="form-select">
+                  <option value="IT">IT</option>
+                  <option value="Engineering">Engineering</option>
+                  <option value="Marketing">Marketing</option>
+                  <option value="Finance">Finance</option>
+                  <option value="Education">Education</option>
+                  <option value="Healthcare">Healthcare</option>
+              </select>
+          </div>
+          <div class="col-md-6">
+              <label for="preferredLocation" class="form-label">Preferred Location</label>
+              <select name="preferredLocation" id="preferredLocation" class="form-select">
+                  <option value="Remote">Remote</option>
+                  <option value="On-Site">On-Site</option>
+                  <option value="Hybrid">Hybrid</option>
+              </select>
+          </div>
 
-    </div>
+          <!-- Submit Button -->
+          <div class="col-md-12 text-center">
+              <button type="submit" class="btn btn-primary px-4">Register</button>
+          </div>
+      </div>
+  </form>
+</div>
+
 
 
     <!-- Modals for All Forms -->
@@ -402,7 +555,7 @@
           <div class="footer-contact pt-3">
             <!-- <p>A108 Adam Street</p> -->
             <!-- <p>New York, NY 535022</p> -->
-            <p class="mt-3"><strong>Phone:</strong> <span>+92 333 667 7768</span></p>
+            <!-- <p class="mt-3"><strong>Phone:</strong> <span>+92 333 667 7768</span></p> -->
             <p><strong>Email:</strong> <span>info@dcf.org.pk</span></p>
           </div>
         </div>
@@ -410,26 +563,26 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="index.html">Home</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="about.html">About us</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services.html">Services</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="registration.html">Registration</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Our Services</h4>
           <ul>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Design</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
-            <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services.html">Skill Development</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services.html">Networking Events</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services.html">Internship Opportunities</a></li>
+            <li><i class="bi bi-chevron-right"></i> <a href="services.html">Mentorship Programs</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-12">
           <h4>Follow Us</h4>
-          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+          <p>Follow us on social media platforms</p>
           <div class="social-links d-flex">
             <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -465,7 +618,9 @@
       const forms = [
         { id: "companyForm", scriptURL: "https://script.google.com/macros/s/AKfycbzixtOMAMtZ-UolNVcG7jOgbhpansnp-GSdKBSyC_t94Rl71Fa7hhrBrjJaMaV_stX4BA/exec" },
         { id: "freelancerForm", scriptURL: "https://script.google.com/macros/s/AKfycby7T1vsHo0SW6lXDYDqnUD7Bmj08QkI4cB7Sqo0X04Mwg3G78uYdd3K4EU0CTF28EoXAw/exec" },
-        { id: "studentForm", scriptURL: "https://script.google.com/macros/s/AKfycbyJssqVEvnvqu4GaAvBZoNKuFTeRPRMou11ifOx-TnX3PZLTtF-1yggWt-M_6Ij7ocb7g/exec" },
+        { id: "studentForm", scriptURL: "https://script.google.com/macros/s/AKfycbwTjCNeoDSIfgDwiUCNcG9TJB0c6aBzcCT7ujAKzVrDkPCN14jOkN1ServuYu9SE5tUhQ/exec" },
+        { id: "professorForm", scriptURL: "https://script.google.com/macros/s/AKfycbw2M90GAuc2tvjHr62LF2G-MHkue6Uf__5v-07FUQ7Y1PCFs4qBrFtEqQED7G191ep8/exec" },
+
       ];
   
       const successModal = new bootstrap.Modal(document.getElementById("successModal"));
